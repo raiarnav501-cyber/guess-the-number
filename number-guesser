@@ -1,0 +1,22 @@
+import random
+
+num = random.randint(1,1000)
+attempts = 0
+while True:
+    try:
+        guess = int(input('Enter Your Guess: '))
+    except ValueError:
+        print("Please Enter a Numeric Value ")
+        continue
+    attempts += 1
+
+    if guess == num:
+        print('You Won in', attempts,'tries')
+        break
+
+    elif guess > num:
+        print('Go lower ')
+    
+    else:
+        print('Go higher ') 
+    
